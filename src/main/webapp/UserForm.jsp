@@ -134,7 +134,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
         <p><input type="text" name="itog" id="itog" value="${itog}" disabled ></p>
   
     <input class = "button8" type="submit" name="sign" value="Рассчитать">
-<p><a class = "button8" href="Form.jsp">Авторизация</a></p>
+<p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
      </div>   
      
   
@@ -200,7 +200,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
   <p> <label for="itog">Итог: </label> </p>
         <p><input type="text" name="itog" id="itog" value="${itog}" disabled ></p>
   <input class = "button8" type="submit" name="sign" value="Рассчитать">
-<p><a class = "button8" href="Form.jsp">Авторизация</a></p>
+<p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
     
 </div>
 <div id = "txt_3">
@@ -242,7 +242,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
   <p> <label for="itog">Итог: </label> </p>
         <p><input type="text" name="itog" id="itog" value="${itog}" disabled ></p>
    <input class = "button8" type="submit" name="sign" value="Рассчитать">
-<p><a class = "button8" href="Form.jsp">Авторизация</a></p>
+<p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
    
 </div>
 <div id = "txt_4">
@@ -251,7 +251,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 <p><label>Данилов В.А</label></p>
 <p><label>Колесова В.Ю</label></p>
 <p><label>Юсупова Э.А</label></p>
-<p><a class = "button8" href="Form.jsp">Авторизация</a></p>
+<p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
 </div>
 </div>
 
