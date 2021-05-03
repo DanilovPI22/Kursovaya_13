@@ -3,8 +3,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="style3.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 <title>Калькулятор - площадь ромба test </title>
+<script>
+
+function change()
+{
+var id=0;
+block_id='block_'+id;
+s=document.getElementById('svet');
+d=s.options[s.selectedIndex].text;;
+next='block_'+d;
+a=document.getElementById(next).innerHTML;
+//b=document.getElementById(block_id).innerHTML;
+document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>';
+//document.getElementById(next).innerHTML='<div id="'+next+'">'+b+'</div>';
+}
+</script>
+
+  <script>
+function change1()
+{
+var id=0;
+block_id='block1_'+id;
+s=document.getElementById('svet1');
+d=s.options[s.selectedIndex].text;;
+next='block1_'+d;
+a=document.getElementById(next).innerHTML;
+//b=document.getElementById(block_id).innerHTML;
+document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>';
+//document.getElementById(next).innerHTML='<div id="'+next+'">'+b+'</div>';
+}
+</script>
+
+  <script>
+function change2()
+{
+var id=0;
+block_id='block2_'+id;
+s=document.getElementById('svet2');
+d=s.options[s.selectedIndex].text;;
+next='block2_'+d;
+a=document.getElementById(next).innerHTML;
+//b=document.getElementById(block_id).innerHTML;
+document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>';
+//document.getElementById(next).innerHTML='<div id="'+next+'">'+b+'</div>';
+}
+</script>
+
+
 </head>
 <body >
 <form align="center" action="calc" method="post">
