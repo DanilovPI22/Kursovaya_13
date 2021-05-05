@@ -69,5 +69,28 @@ public class PDFGenerator extends HttpServlet {
 		
 		
 		document.close();
+		
+	
+		
+	    ServletOutputStream outputStream = null;
+	    BufferedInputStream inputStream = null;
+	    
+	    try {
+	        outputStream = response.getOutputStream();
+	        response.setContentType("application/vnd.ms-excel");
+	        response.setHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
+	        response.setContentLength((int) file.length());
+	        FileInputStream fileInputStream = new FileInputStream(file);
+	        inputStream = new BufferedInputStream(fileInputStream);
+	        int readBytes = 0;
+	        while ((readBytes = inputStream.read()) != -1)
+	            outputStream.write(readBytes);
+	    }catch (NullPointerException e){
+	        e.printStackTrace();
+	    }finally {
+	        outputStream.flush();
+	        outputStream.close();
+	        inputStream.close();
+	    }
 	}
 }
