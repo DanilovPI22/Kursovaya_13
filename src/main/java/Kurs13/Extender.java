@@ -165,3 +165,45 @@ public class Extender extends Abstract{
 
 
 }
+class Lightboxes extends Abstract {
+	@Override
+	public void Abs() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override 
+	protected double Math4(String diod) {
+		Extender.j1=1;
+		int i = Integer.parseInt(diod);
+		switch (i) {
+		case 1: Extender.j1 = Extender.j1 + 0.15; break;
+		case 2: Extender.j1 = Extender.j1 + 0.2; break;
+		
+		}
+		return Extender.j1;
+		
+		
+	}
+
+}
+class Vyvesky extends Abstract {
+
+	@Override
+	public void Abs() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+@Override
+	
+	protected double Math9(String koefv1) {
+	Extender.p=1;
+		int i = Integer.parseInt(koefv1);
+		switch (i) {
+		case 1: Extender.p = Extender.p + 0.15; break;
+		case 2: Extender.p = Extender.p + 0.2; break;
+		case 3: Extender.p = Extender.p + 0.25; break;
+		}
+		return Extender.p;
+		}
+}
