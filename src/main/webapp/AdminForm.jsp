@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="style3.css" rel="stylesheet" type="text/css">
-<meta charset="UTF-8">
-<title>Калькулятор - площадь ромба test </title>
-<script>
 
+
+
+
+<link href="style2.css" rel="stylesheet" type="text/css">
+<script>
 function change()
 {
 var id=0;
@@ -51,42 +52,43 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 //document.getElementById(next).innerHTML='<div id="'+next+'">'+b+'</div>';
 }
 </script>
-
-
 </head>
 <body background = "https://img4.goodfon.ru/wallpaper/nbig/7/70/material-wallpaper-design-abstract-material-design-colors-4k.jpg">
 <form align="center" action="calc" method="post">
-<p><div class="tabs">
-    <input type="radio" name="tab" value="ObBukvy"  id="tab_1" checked >
+<div class="tabs">
+    <input type="radio"  name="tab" value="ObBukvy" id="tab_1" checked>
     <label for="tab_1">Объёмные буквы</label>
 
-    <input type="radio" name="tab" value="Lightbox"  id="tab_2">
+    <input type="radio" name="tab" value="Lightbox" id="tab_2">
     <label for="tab_2">Лайтбоксы</label>
 
-    <input type="radio" name="tab" value="Vyvesky"  id="tab_3">
+    <input type="radio" name="tab" value="Vyvesky" id="tab_3">
     <label for="tab_3">Вывески</label>
     
     <input type="radio" name="tab" value="" id="tab_4">
-    <label for="tab_4">Разработчики</label>
+    <label for="tab_4">Настройки администратора</label>
+   
+   <input type="radio" name="tab" value="" id="tab_5">
+    <label for="tab_5">Информация о разработчиках</label>
    
 
     <div id="txt_1">
     
-        <p><h1 class="select">Пользовательский аккаунт</h1>
+         <p><h1 class = "select">Аккаунт администратора</h1>
 
 
 
         <label for="first">Слово:</label>
-        <input pattern=^[А-Яа-яЁё]+$  title="Возможен ввод только русскоязычных слов, без использования цифр. Пробелы ставить запрещено" type="text" name="first" id="first" value="${first}" maxlength = "10" >
-        <label for="second">Высота слова: </label>
+        <input pattern=^[А-Яа-яЁё]+$  title="Возможен ввод только русскоязычных слов, без использования цифр. Пробелы ставить запрещено" type="text" name="first" id="first" value="${first}" maxlength = "16" >
+        <label for="second">Высота слова в см: </label>
         <input title = "Возможно использование только числовых значений" type="text" pattern=^[0-9]+$ name="second" id="second" value="${second}" maxlength = "3" max = "200">
         
         <p><label>Выберите шрифт</label>
        
         </p>
-        <p><select name = "shrift" id = "shrift" value = "${shrift}" class = "combo" >
+        <p><select name = "shrift" class ="cs-select" id = "shrift" value = "${shrift}" class = "combo" >
         <option selected disabled value="">-</option>
-        <option value="1">Без засечек</option>
+        <option  value="1">Без засечек</option>
     <option value="2">Прописной</option>
     <option value="3">С засечками</option>
    
@@ -98,9 +100,6 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
                 <option value="1"><a href="#">Световые</a></option>
                 <option value="2"><a href="#">Не световые</a></option>
 </select>
-
-
-
 <div id="block_0"></div>
 <div id="block_Световые" style="visibility: hidden;">
 <p><label>Выберите вид освещения</label></p>
@@ -127,20 +126,20 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 </div>
   <p> <label for="itog">Промокод: </label> </p>
         <p><input type="text" name="promo" id="promo" value="${promo}" ></p>
-
+        
 
 
   <p> <label for="itog">Итог: </label> </p>
         <p><input type="text" name="itog" id="itog" value="${itog}" disabled ></p>
-  
-    <input class = "button8" type="submit" name="sign" value="Рассчитать">
-<p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
+  <input class = "button8" type="submit" name="sign" value="Рассчитать">
+<p><a  class = "button8" href="Authorization.jsp">Авторизация</a></p>
+   
      </div>   
      
   
 
 <div id = "txt_2">
-<p><h1 class="select">Пользовательский аккаунт</h1>
+<p><h1 class = "select">Аккаунт администратора</h1>
 
 
         <label for="first">Высота лайтбокса:</label>
@@ -196,15 +195,15 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
         <p><input type="text" name="promo" id="promo" value="${promo}" ></p>
 
 
-
-  <p> <label for="itog">Итог: </label> </p>
+ <p> <label for="itog">Итог: </label> </p>
         <p><input type="text" name="itog" id="itog" value="${itog}" disabled ></p>
-  <input class = "button8" type="submit" name="sign" value="Рассчитать">
+     <input class = "button8" type="submit" name="sign" value="Рассчитать">
 <p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
-    
 </div>
 <div id = "txt_3">
-<p><h1 class="select">Пользовательский аккаунт</h1>
+<p><h1 class = "select">Аккаунт администратора</h1>
+
+
 
 
         <label for="first">Высота вывески:</label>
@@ -238,26 +237,56 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
         <p><input type="text" name="promo" id="promo" value="${promo}" ></p>
    
 
-
-  <p> <label for="itog">Итог: </label> </p>
+   
+ <p> <label for="itog">Итог: </label> </p>
         <p><input type="text" name="itog" id="itog" value="${itog}" disabled ></p>
    <input class = "button8" type="submit" name="sign" value="Рассчитать">
 <p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
    
 </div>
 <div id = "txt_4">
+<p><h1 class = "select">Аккаунт администратора</h1>
+
+   
+   <p><label>Введите новый коэффициент для расчёта объёмных букв</label></p>  
+        <input title = "Возможно использование только числовых значений, число меньше 10" type="text" pattern=[0-9] name="adminput" id="adminput" value="${adminput}" maxlength = "10" >
+
+<p><input class = "button8" formaction="servadm" formmethod="post" type="submit" value="Применить настройки" /></p>
+
+
+<p><a  class = "button8" href="Authorization.jsp">Авторизация</a></p>
+</div>
+
+<div id = "txt_5">
 <p><h1 class = "select">Разработчики</h1>
 <p><label>Шамуратов Д.Д</label></p>
 <p><label>Данилов В.А</label></p>
 <p><label>Колесова В.Ю</label></p>
 <p><label>Юсупова Э.А</label></p>
-<p><a class = "button8" href="Authorization.jsp">Авторизация</a></p>
-</div>
+<a  class = "button8" href="Authorization.jsp">Авторизация</a>
 </div>
 
 
- 
+
+</div>
+
+   
+  
+     
+
 </form>
 
-    </body>
+
+<center>
+
+
+
+
+
+    <form method="post" align="center" action="serv" target="_blank">
+    <input  type="submit" name="download" value="Скачать pdf">
+    </form>
+
+</center>
+</body>
 </html>

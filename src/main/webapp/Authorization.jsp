@@ -46,7 +46,7 @@
         <form method="post" action="login">
         <br>Логин   :<input type="text" name="email" required maxlenth = 16 /><br/>
         <br>Пароль:<input type="text" name="pass" required maxlenth = 16 /><br/>
-        <p><input type="submit" value="Войти" /></p>
+        <p><input class = "button8" type="submit" value="Войти" /></p>
         </form>
         </div>
     </body>

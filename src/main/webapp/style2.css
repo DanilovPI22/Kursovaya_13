@@ -1,0 +1,58 @@
+
+.button8 {
+  display: inline-block;
+  color: #785959;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+} 
+.button8:hover { background: rgba(255,255,255,.2);  box-shadow: 0 2px 0 #006599;
+  transform: translateY(-3px); }
+.button8:active { background: white; }
+.select {
+  color: #000000;
+}
+.aligh{
+align: center;
+}
+
+.tabs { width: 100%; padding: 20px; margin: 0 auto; }
+.tabs>input { display: none; }
+.tabs>div {
+    display: none;
+    padding: 12px;
+    border: 1px solid #C0C0C0;
+    background: 	#c8cbcc;
+    border-radius: 5px;
+}
+.tabs>label {
+    display: inline-block;
+    padding: 20px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #666666;
+    border: 1px solid #C0C0C0;
+    background: #bbc4c9;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.tabs>input:checked + label {
+    color: #000000;
+    border: 1px solid #C0C0C0;
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    
+}
+.tabs>label:hover { background: white;  }
+.tabs>label:active { background: white;  }
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4,
+#tab_5:checked ~ #txt_5 { display: block;  }
+
