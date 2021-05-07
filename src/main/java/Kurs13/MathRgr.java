@@ -19,11 +19,11 @@ public class MathRgr extends  HttpServlet   {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		response.setContentType("text/html;charset=UTF-8");
-		if (TestServlet.prov == 2) {
-		request.getRequestDispatcher("/New.jsp").forward(request, response);
+		if (Authorization.prov == 2) {
+		request.getRequestDispatcher("/AdminForm.jsp").forward(request, response);
 		}
-		else if (TestServlet.prov == 1) {
-			request.getRequestDispatcher("/Results.jsp").forward(request, response);
+		else if (Authorization.prov == 1) {
+			request.getRequestDispatcher("/UserForm.jsp").forward(request, response);
 		}
 	}
 	
@@ -99,7 +99,7 @@ public class MathRgr extends  HttpServlet   {
 			}
 		
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) throws IOException  {
-			Abstract lolo = new Mathematics();
+			Abstract lolo = new Extender();
 			Abstract lolo1 = new Lightboxes();
 			Abstract lolo2 = new Vyvesky();
 			result = 0;sl = 0;shrf = 0; sv = 0; dd = 0;
