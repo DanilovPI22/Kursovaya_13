@@ -19,7 +19,7 @@ public class AdminSettings extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        RequestDispatcher rs = request.getRequestDispatcher("/New.jsp");
+        RequestDispatcher rs = request.getRequestDispatcher("/AdminForm.jsp");
         rs.include(request, response);
 
          newvalue = request.getParameter("adminput");

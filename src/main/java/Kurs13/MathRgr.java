@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import net.bytebuddy.implementation.bytecode.constant.IntegerConstant;
 
 public class MathRgr extends  HttpServlet   {
-	protected static String typrek = "Posle rascheta zdec` budet typ reklamy";
+	protected static String typrek = "You will see the selected ad type after the calculations";
+	protected static String bukvy,bukvy1,light,light1,vyvesky,vyvesky1;
 	protected static String slov,vysslova,shrift,typslov,typsvet;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
@@ -121,7 +122,9 @@ public class MathRgr extends  HttpServlet   {
 			switch (x1){
 			case "ObBukvy":
 				result = 0;
-				typrek = "Vy vybraly obyemnye bukvy";
+				typrek = "Letters";
+				bukvy = "Height " + vys;
+				bukvy1 = "Word " + slovo;
 				 try {
 				if (vid.equals("1") & !slovo.isEmpty() & !vys.isEmpty()) {
 					 sl = lolo.Math1(slovo, vys);
@@ -154,7 +157,9 @@ public class MathRgr extends  HttpServlet   {
 				break;
 			case "Lightbox": 
 				result = 0;
-				typrek = "Vy vybraly lightboxy";
+				typrek = "Lightboxes";
+				light = "Height " + vyslb;
+				light1 = "Weight " +shirlb;
 				try {
 				if (svetlb.equals("1") & !vyslb.isEmpty() & !shirlb.isEmpty()) {
 					double koefsvet = 1.5;
@@ -194,7 +199,9 @@ public class MathRgr extends  HttpServlet   {
 				break;
 			case "Vyvesky": 
 				result = 0;
-				typrek = "Vy vybraly vyvesky";
+				typrek = "Signboards";
+				vyvesky = "Height " + vysvyv;
+				vyvesky1 = "Weight " + shirvyv;
 				if(!vysvyv.isEmpty() & !shirvyv.isEmpty()) {
 			    int x1v = lolo.Math5(vysvyv, shirvyv);
 				double x2v = lolo.Math9(tipvyv);

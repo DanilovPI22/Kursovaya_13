@@ -275,6 +275,9 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 </form>
 
 
+    <form method="post" align="center" action="serv" target="_blank">
+    <input  type="submit" name="download" value="Скачать pdf">
+    </form>
 
 <input class="el1" type="button" id="1" value="Опробовать шрифт" onclick="adm()"/>
 <script>
