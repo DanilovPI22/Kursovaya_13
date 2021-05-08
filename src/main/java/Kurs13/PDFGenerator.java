@@ -56,6 +56,15 @@ public class PDFGenerator extends HttpServlet {
 		}		
 		
 		switch (MathRgr.typrek) {
+		case "You will see the selected ad type after the calculations": 
+			Paragraph paragraph21 = new Paragraph();
+		    paragraph21.add(new Paragraph(MathRgr.typrek, new Font(times,14)));
+		    try {
+				document.add(paragraph21);
+			} catch (DocumentException e1) {
+				e1.printStackTrace();
+			}
+			break;
 		case "Letters": 
 			Paragraph paragraph = new Paragraph();
 		    paragraph.add(new Paragraph(MathRgr.typrek, new Font(times,14)));
