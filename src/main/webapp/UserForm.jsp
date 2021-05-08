@@ -4,10 +4,27 @@
 <html>
 <head>
 <link href="style3.css" rel="stylesheet" type="text/css">
-<meta charset="UTF-8">
-<title>Калькулятор - площадь ромба test </title>
-<script>
 
+
+  <script >
+    function adm() {
+
+	   // Получаем значение выбранного поля
+	   var selected = adm2.value;
+	  adm2.options[adm2.selectedIndex].setAttribute("selected", "selected");
+	   // Получаем элемент, в котором будем менять шрифт.
+	   var change = document.getElementsByClassName('select');
+
+	   // Меняем шрифт на полученный из поля select
+	   change[0].style.fontFamily = selected;
+	   change[1].style.fontFamily = selected;
+	   change[2].style.fontFamily = selected;
+	   change[3].style.fontFamily = selected;
+	   change[4].style.fontFamily = selected;
+	 }
+   </script>
+
+  <script>
 function change()
 {
 var id=0;
@@ -51,8 +68,6 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 //document.getElementById(next).innerHTML='<div id="'+next+'">'+b+'</div>';
 }
 </script>
-
-
 </head>
 <body background = "https://img4.goodfon.ru/wallpaper/nbig/7/70/material-wallpaper-design-abstract-material-design-colors-4k.jpg">
 <form align="center" action="calc" method="post">
@@ -259,5 +274,32 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
  
 </form>
 
-    </body>
+
+
+<input class="el1" type="button" id="1" value="Опробовать шрифт" onclick="adm()"/>
+<script>
+window.onload = function() {
+	var button = document.getElementById('1');
+	   button.click();
+	};
+	
+</script>
+   
+        <p><select class="el1" name = "adm2" id = "adm2" onchange="localStorage.adm2=this.selectedIndex"  value = "${adm2}" class = "combo" disabled >
+        <option  disabled value="">-</option>
+        <option value="1" ${adm1 eq '1' ? 'selected' : ''}>Times New Roman</option>
+    <option value="comic sans ms" ${adm1 eq 'comic sans ms' ? 'selected' : ''}>comic sans ms</option>
+    <option value="sans-serif" ${adm1 eq 'sans-serif' ? 'selected' : ''}>sans-serif</option>
+   
+   </select>
+
+<script>
+
+//восстанавливаем запомненное значение, если есть
+
+if(localStorage.adm1!==undefined) adm2.selectedIndex = localStorage.adm1;
+
+</script>
+
+</body>
 </html>

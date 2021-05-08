@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import net.bytebuddy.implementation.bytecode.constant.IntegerConstant;
 
 public class MathRgr extends  HttpServlet   {
-	protected static String typrek = "После рассчёта стоимости здесь появятся выбранные вами параметры";
+	protected static String typrek = "Posle rascheta zdec` budet typ reklamy";
 	protected static String slov,vysslova,shrift,typslov,typsvet;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
@@ -121,7 +121,7 @@ public class MathRgr extends  HttpServlet   {
 			switch (x1){
 			case "ObBukvy":
 				result = 0;
-				typrek = "Выбранный тип рекламы: Объёмные буквы";
+				typrek = "Vy vybraly obyemnye bukvy";
 				 try {
 				if (vid.equals("1") & !slovo.isEmpty() & !vys.isEmpty()) {
 					 sl = lolo.Math1(slovo, vys);
@@ -154,7 +154,7 @@ public class MathRgr extends  HttpServlet   {
 				break;
 			case "Lightbox": 
 				result = 0;
-				typrek = "Выбранный тип рекламы: Лайтбоксы";
+				typrek = "Vy vybraly lightboxy";
 				try {
 				if (svetlb.equals("1") & !vyslb.isEmpty() & !shirlb.isEmpty()) {
 					double koefsvet = 1.5;
@@ -194,7 +194,7 @@ public class MathRgr extends  HttpServlet   {
 				break;
 			case "Vyvesky": 
 				result = 0;
-				typrek = "Выбранный тип рекламы: Вывески";
+				typrek = "Vy vybraly vyvesky";
 				if(!vysvyv.isEmpty() & !shirvyv.isEmpty()) {
 			    int x1v = lolo.Math5(vysvyv, shirvyv);
 				double x2v = lolo.Math9(tipvyv);

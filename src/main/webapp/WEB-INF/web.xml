@@ -11,6 +11,34 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    
+       <servlet>
+        <servlet-name>calc</servlet-name>
+        <servlet-class>Kurs13.MathRgr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>calc</servlet-name>
+        <url-pattern>/calc</url-pattern>
+    </servlet-mapping>
+
+   
+    <servlet>
+        <servlet-name>serv</servlet-name>
+        <servlet-class>Kurs13.PDFGenerator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>serv</servlet-name>
+        <url-pattern>/serv</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>servadm</servlet-name>
+        <servlet-class>Kurs13.AdminSettings</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servadm</servlet-name>
+        <url-pattern>/servadm</url-pattern>
+    </servlet-mapping>
   
   <welcome-file-list>    
     <welcome-file>Authorization.jsp</welcome-file>

@@ -8,7 +8,27 @@
 
 
 <link href="style2.css" rel="stylesheet" type="text/css">
-<script>
+
+     <script >
+    function adm() {
+
+	   // Получаем значение выбранного поля
+	   dr = document.getElementById('adm1');
+	   var selected = dr.value;
+	  dr.options[dr.selectedIndex].setAttribute("selected", "selected");
+	   // Получаем элемент, в котором будем менять шрифт.
+	   var change = document.getElementsByClassName('select');
+
+	   // Меняем шрифт на полученный из поля select
+	   change[0].style.fontFamily = selected;
+	   change[1].style.fontFamily = selected;
+	   change[2].style.fontFamily = selected;
+	   change[3].style.fontFamily = selected;
+	   change[4].style.fontFamily = selected;
+	   
+	 }
+   </script>
+  <script>
 function change()
 {
 var id=0;
@@ -246,7 +266,25 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 </div>
 <div id = "txt_4">
 <p><h1 class = "select">Аккаунт администратора</h1>
+   <script>
 
+//восстанавливаем запомненное значение, если есть
+
+if(localStorage.adm1!==undefined) adm1.selectedIndex = localStorage.adm1;
+
+</script>
+   <p><label class = "select">Выберите шрифт для окон </label></p>  
+        <p><select name = "adm1" id = "adm1" onchange="localStorage.adm1=this.selectedIndex"  value = "${adm1}" >
+        <option  disabled value="">-</option>
+        <option value="Times New Roman" ${adm1 eq 'Times New Roman' ? 'selected' : ''}>Times New Roman</option>
+    <option value="comic sans ms" ${adm1 eq 'comic sans ms' ? 'selected' : ''}>comic sans ms</option>
+    <option value="sans-serif" ${adm1 eq 'sans-serif' ? 'selected' : ''}>sans-serif</option>
+   
+   </select>
+   
+
+   
+   <p><input class = "button8" type="button" id="1" value="Применить шрифт" onclick="adm()"/></p>
    
    <p><label>Введите новый коэффициент для расчёта объёмных букв</label></p>  
         <input title = "Возможно использование только числовых значений, число меньше 10" type="text" pattern=[0-9] name="adminput" id="adminput" value="${adminput}" maxlength = "10" >
@@ -280,9 +318,25 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 <center>
 
 
+<script>
+dr1 = document.getElementById('adm1')
+//восстанавливаем запомненное значение, если есть
+
+if(localStorage.adm1!==undefined) dr1.options.selectedIndex = localStorage.adm1;
+
+</script>
 
 
 
+<script>
+window.onload = function() {
+	var button = document.getElementById('1');
+	   button.click();
+	};
+	
+</script>
+
+</form>
     <form method="post" align="center" action="serv" target="_blank">
     <input  type="submit" name="download" value="Скачать pdf">
     </form>
