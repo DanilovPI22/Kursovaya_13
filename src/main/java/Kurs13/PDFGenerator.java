@@ -57,7 +57,7 @@ public class PDFGenerator extends HttpServlet {
 		
 		
 		Paragraph paragraph = new Paragraph();
-	    paragraph.add(new Paragraph("Привет", new Font(times,14)));
+	    paragraph.add(new Paragraph(MathRgr.typrek, new Font(times,14)));
 	    
 	    
 	  
