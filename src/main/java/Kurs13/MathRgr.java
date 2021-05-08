@@ -132,6 +132,7 @@ public class MathRgr extends  HttpServlet   {
 					 sv = lolo.Math3(svet);
 					 dd = lolo.Math4(diod);
 					 result = (sl * shrf * sv * dd)-(sl * shrf * sv * dd * prom) ;
+					 result = Math.round(result);
 					 System.out.println(result);
 					 request.setAttribute("itog", result);
 					 slov = "¬ведЄнное вами слово: " + slovo;
@@ -140,6 +141,7 @@ public class MathRgr extends  HttpServlet   {
 					 sl = lolo.Math1(slovo, vys);
 					 shrf = lolo.Math2(sh);
 					 result = (sl * shrf) - (sl * shrf * prom) ;
+					 result = Math.round(result);
 					 System.out.println(result);
 					 request.setAttribute("itog", result);
 					
@@ -170,6 +172,7 @@ public class MathRgr extends  HttpServlet   {
 					double x3 = lolo.Math7(diodlb);
 					System.out.println(x3);
 					result = (x1 * x2 * x3 * koefsvet) - (x1 * x2 * x3 * koefsvet * prom);
+					result = Math.round(result);
 					System.out.println(result);
 					request.setAttribute("itog", result);
 					
@@ -184,6 +187,7 @@ public class MathRgr extends  HttpServlet   {
 					System.out.println(x3);
 					result = (x1 * x2 * x3 * koefsvet) - (x1 * x2 * x3 * koefsvet * prom);
 					System.out.println(result);
+					result = Math.round(result);
 					request.setAttribute("itog", result);
 					
 				}
@@ -225,7 +229,7 @@ public class MathRgr extends  HttpServlet   {
 			    result = (x1v * x2v * x3v * dop* dop2) - (x1v * x2v * x3v * dop* dop2 * prom);
 			    System.out.println(result);
 			    request.setAttribute("tab", "Vyvesky");
-			    
+			    result = Math.round(result);
 			    request.setAttribute("itog", result);
 				}
 				else {
@@ -237,11 +241,8 @@ public class MathRgr extends  HttpServlet   {
 		   if (result !=0) {
 			   request.setAttribute("result", result);
 		   }
-		  
-			
-			
-			
-			
+		  	
+					
 			
 			
 		}
