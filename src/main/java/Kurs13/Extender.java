@@ -13,7 +13,7 @@ public class Extender extends Abstract{
 	protected static String s;
 	protected static int res; protected static double res1,res2,res3,res4;
 	
-	protected static String getKoef() throws IOException {
+	protected String getKoef() throws IOException {
 		File file = new File("AdmSettings.txt");
 		if (file.exists()){
 			Scanner scanner = new Scanner(file);
@@ -43,17 +43,19 @@ public class Extender extends Abstract{
 	}
 	
 	@Override
+	
 	protected int Math1(String slovo, String vysota) {
 		n = slovo.length();
-		h = Integer.parseInt(vysota);
+		h = Parseint(vysota);
 		res = n * h;
 		return res;
 		
 	}
 	
 	@Override
+	
 	protected double Math2(String shrif) {
-		int i = Integer.parseInt(shrif);
+		int i = Parseint(shrif);
 		f = 1;
 		switch (i){
 		case 1: f = f +0.15; break;
@@ -64,13 +66,14 @@ public class Extender extends Abstract{
 		return res1;
 		
 	}
-	@Override
 	
+	@Override
+
 	protected double Math3(String svet) throws IOException {
 		String sv = getKoef();
 		
-		j = Integer.parseInt(sv);
-		int i = Integer.parseInt(svet);
+		j = Parse(sv);
+		int i = Parseint(svet);
 		switch (i){
 		case 1: j = j +0.25; break;
 		case 2: j = j +0.2; break;
@@ -84,7 +87,7 @@ public class Extender extends Abstract{
 	@Override
 	protected double Math4(String diod) {
 		c = 1;
-		int i = Integer.parseInt(diod);
+		int i = Parseint(diod);
 		switch (i){
 		case 1: c = c +0.15; break;
 		case 2: c = c +0.2; break;
@@ -94,19 +97,21 @@ public class Extender extends Abstract{
 		return res3;
 		
 	}
+	
 	@Override
 	
 	protected int Math5(String vys,String shir) {
 		
-		int wh = Integer.parseInt(shir)*Integer.parseInt(vys);
+		int wh = Parseint(shir)*Parseint(vys);
 		return wh;
 		
 	}
+
 	@Override
-	
+
 	protected double Math6(String koef1) {
 		k = 1;
-		int i = Integer.parseInt(koef1);
+		int i = Parseint(koef1);
 		switch (i) {
 		case 1: k = k + 0.1; break;
 		case 2: k = k + 0.15; break;
@@ -119,11 +124,12 @@ public class Extender extends Abstract{
 		return res4;
 		
 	}
+
 	@Override
 	
 	protected double Math7(String koef2) {
 		j1=1;
-		int i = Integer.parseInt(koef2);
+		int i = Parseint(koef2);
 		switch (i) {
 		case 1: j1 = j1 + 0.1; break;
 		case 2: j1 = j1 + 0.15; break;
@@ -132,11 +138,12 @@ public class Extender extends Abstract{
 		return j1;
 		
 	}
+	
 	@Override
 	
 	protected double Math8(String koef3) {
 		j=1;
-		int i = Integer.parseInt(koef3);
+		int i = Parseint(koef3);
 		switch (i) {
 		case 1: j = j + 0.1; break;
 		case 2: j = j + 0.15; break;
@@ -144,11 +151,11 @@ public class Extender extends Abstract{
 		}
 		return j;
 		}
+
 	@Override
-	
 	protected double Math9(String koefv1) {
 		k=1;
-		int i = Integer.parseInt(koefv1);
+		int i = Parseint(koefv1);
 		switch (i) {
 		case 1: k = k + 0.15; break;
 		case 2: k = k + 0.2; break;
@@ -166,6 +173,7 @@ public class Extender extends Abstract{
 
 }
 class Lightboxes extends Abstract {
+	
 	@Override
 	public void Abs() {
 		// TODO Auto-generated method stub
@@ -174,7 +182,7 @@ class Lightboxes extends Abstract {
 	@Override 
 	protected double Math4(String diod) {
 		Extender.j1=1;
-		int i = Integer.parseInt(diod);
+		int i = Parseint(diod);
 		switch (i) {
 		case 1: Extender.j1 = Extender.j1 + 0.15; break;
 		case 2: Extender.j1 = Extender.j1 + 0.2; break;
@@ -198,7 +206,7 @@ class Vyvesky extends Abstract {
 	
 	protected double Math9(String koefv1) {
 	Extender.p=1;
-		int i = Integer.parseInt(koefv1);
+		int i = Parseint(koefv1);
 		switch (i) {
 		case 1: Extender.p = Extender.p + 0.15; break;
 		case 2: Extender.p = Extender.p + 0.2; break;
