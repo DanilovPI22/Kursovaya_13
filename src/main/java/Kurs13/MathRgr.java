@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import net.bytebuddy.implementation.bytecode.constant.IntegerConstant;
 
 public class MathRgr extends  HttpServlet   {
-	protected static String typrek = "You will see the selected ad type after the calculations";
+	public static String typrek = "You will see the selected ad type after the calculations";
 	protected static String bukvy,bukvy1,light,light1,vyvesky,vyvesky1;
 	protected static String slov,vysslova,shrift,typslov,typsvet;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
