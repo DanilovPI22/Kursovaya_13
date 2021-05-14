@@ -30,7 +30,7 @@ public class AdminSettings extends HttpServlet {
 
     } 
 
-    protected static void setAdm(String usf) throws IOException {
+    public static void setAdm(String usf) throws IOException {
 
         File file = new File("AdmSettings.txt");
         if (file.exists() == false) {
