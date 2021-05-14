@@ -44,7 +44,7 @@ protected int Math1(String slovo, String vysota) {
 return 0;
 }
 
-protected String getKoef() throws IOException {
+public String getKoef() throws IOException {
 // TODO Auto-generated method stub
 return null;
 }

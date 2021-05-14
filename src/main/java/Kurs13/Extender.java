@@ -13,7 +13,7 @@ public class Extender extends Abstract{
 	protected static String s;
 	protected static int res; protected static double res1,res2,res3,res4;
 	
-	protected String getKoef() throws IOException {
+	public String getKoef() throws IOException {
 		File file = new File("AdmSettings.txt");
 		if (file.exists()){
 			Scanner scanner = new Scanner(file);
