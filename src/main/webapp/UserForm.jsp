@@ -87,7 +87,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 
     <div id="txt_1">
     
-        <p><h1 class="select">Пользовательский аккаунт</h1><img src="../images/bukv.jpg" width="20%" height="4%" align="right">
+        <p><h1 class="select">Пользовательский аккаунт</h1><img src="images/bukv.jpg" width="20%" height="4%" align="right">
 
 
 
@@ -155,7 +155,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
   
 
 <div id = "txt_2">
-<p><h1 class="select">Пользовательский аккаунт</h1><img src="../images/light.jpg" width="20%" height="4%" align="right">
+<p><h1 class="select">Пользовательский аккаунт</h1><img src="images/light.jpg" width="20%" height="4%" align="right">
 
 
         <label for="first">Высота лайтбокса:</label>
@@ -219,7 +219,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
     
 </div>
 <div id = "txt_3">
-<p><h1 class="select">Пользовательский аккаунт</h1><img src="../images/vyvesky.jpg" width="20%" height="4%" align="right">
+<p><h1 class="select">Пользовательский аккаунт</h1><img src="images/vyvesky.jpg" width="20%" height="4%" align="right">
 
 
         <label for="first">Высота вывески:</label>
