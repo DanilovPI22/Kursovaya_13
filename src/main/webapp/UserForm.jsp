@@ -219,7 +219,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
     
 </div>
 <div id = "txt_3">
-<p><h1 class="select">Пользовательский аккаунт</h1><p><img src="images/vyvesky.jpg" width="10%" height="2%" align="top"></p>
+<p><h1 class="select">Пользовательский аккаунт</h1><p><img src="images/vyveska.jpg" width="10%" height="2%" align="top"></p>
 
 
         <label for="first">Высота вывески:</label>
