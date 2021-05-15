@@ -6,9 +6,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Kurs13.MathRgr;
+import Kurs13.Authorization;
 
-public class MathRgrTest {
+
+public class AuthTest {
 
 @BeforeClass
 public static void setUpBeforeClass() throws Exception {
@@ -21,8 +22,9 @@ public void setUp() throws Exception {
 
 @Test
 public void test() {
-MathRgr math = new MathRgr();
-assertEquals(math.typrek,"You will see the selected ad type after the calculations");
+Authorization auth = new Authorization();
+int x = auth.checkUser("user", "12");
+assertEquals(x,1);
 }
 
 }
