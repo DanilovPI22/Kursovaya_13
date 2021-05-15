@@ -70,6 +70,7 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 </script>
 </head>
 <body background = "https://img4.goodfon.ru/wallpaper/nbig/7/70/material-wallpaper-design-abstract-material-design-colors-4k.jpg">
+<input type="hidden" name="role" id="role" value="${role}"/>
 <form align="center" action="calc" method="post">
 <p><div class="tabs">
     <input type="radio" name="tab" value="ObBukvy"  id="tab_1" checked >
@@ -284,8 +285,10 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 window.onload = function() {
 	var button = document.getElementById('1');
 	   button.click();
-	};
-	
+		   if (document.getElementById('role').value.length<4){
+	        location.href='Authorization.jsp';
+	    
+		   }}
 </script>
    
         <p><select class="el1" name = "adm2" id = "adm2" onchange="localStorage.adm2=this.selectedIndex"  value = "${adm2}" class = "combo" disabled >

@@ -74,6 +74,9 @@ document.getElementById(block_id).innerHTML='<div id="'+block_id+'">'+a+'</div>'
 </script>
 </head>
 <body background = "https://img4.goodfon.ru/wallpaper/nbig/7/70/material-wallpaper-design-abstract-material-design-colors-4k.jpg">
+<input type="hidden" name="role" id="role" value="${role}"/>
+
+
 <form align="center" action="calc" method="post">
 <div class="tabs">
     <input type="radio"  name="tab" value="ObBukvy" id="tab_1" checked>
@@ -332,9 +335,12 @@ if(localStorage.adm1!==undefined) dr1.options.selectedIndex = localStorage.adm1;
 window.onload = function() {
 	var button = document.getElementById('1');
 	   button.click();
-	};
-	
+		   if (document.getElementById('role').value.length<5){
+	        location.href='Authorization.jsp';
+	    
+		   }}
 </script>
+
 
 </form>
     <form method="post" align="center" action="serv" target="_blank">
@@ -342,5 +348,7 @@ window.onload = function() {
     </form>
 
 </center>
+
+
 </body>
 </html>

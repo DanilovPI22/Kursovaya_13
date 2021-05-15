@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 
@@ -25,12 +26,14 @@ public class Authorization extends HttpServlet {
         
         if(checkUser(email, pass) == 1)
         {
+        	request.setAttribute("role", email);
             RequestDispatcher rs = request.getRequestDispatcher("/UserForm.jsp");
             rs.forward(request, response);
             prov = 1;
         }
         if(checkUser(email, pass) == 2)
         {
+        	request.setAttribute("role", email);
             RequestDispatcher rs = request.getRequestDispatcher("/AdminForm.jsp");
             rs.forward(request, response);
             prov = 2;
