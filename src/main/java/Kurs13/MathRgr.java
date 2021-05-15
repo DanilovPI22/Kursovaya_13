@@ -21,9 +21,11 @@ public class MathRgr extends  HttpServlet   {
 		Calc.setAsRequestAttributesAndCalculate(request);
 		response.setContentType("text/html;charset=UTF-8");
 		if (Authorization.prov == 2) {
+			request.setAttribute("role", Authorization.email);
 		request.getRequestDispatcher("/AdminForm.jsp").forward(request, response);
 		}
 		else if (Authorization.prov == 1) {
+			request.setAttribute("role", Authorization.email);
 			request.getRequestDispatcher("/UserForm.jsp").forward(request, response);
 		}
 	}
