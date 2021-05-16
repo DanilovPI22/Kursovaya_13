@@ -16,6 +16,7 @@ public class MathRgr extends  HttpServlet   {
 	public static String typrek = "You will see the selected ad type after the calculations";
 	protected static String bukvy,bukvy1,light,light1,vyvesky,vyvesky1;
 	protected static String slov,vysslova,shrift,typslov,typsvet;
+	public static Double summ;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
@@ -137,6 +138,7 @@ public class MathRgr extends  HttpServlet   {
 					 result = Math.round(result);
 					 System.out.println(result);
 					 request.setAttribute("itog", result);
+					 summ = result;
 					 slov = "¬ведЄнное вами слово: " + slovo;
 				}
 				else if (vid.equals("2") & !slovo.isEmpty() & !vys.isEmpty()) {
@@ -146,7 +148,7 @@ public class MathRgr extends  HttpServlet   {
 					 result = Math.round(result);
 					 System.out.println(result);
 					 request.setAttribute("itog", result);
-					
+					 summ = result;
 				}
 				else  {
 					String er = ("Error11!");
@@ -177,6 +179,7 @@ public class MathRgr extends  HttpServlet   {
 					result = Math.round(result);
 					System.out.println(result);
 					request.setAttribute("itog", result);
+					summ = result;
 					
 				}
 				else if (svetlb.equals("2") & !vyslb.isEmpty() & !shirlb.isEmpty()) {
@@ -191,6 +194,7 @@ public class MathRgr extends  HttpServlet   {
 					System.out.println(result);
 					result = Math.round(result);
 					request.setAttribute("itog", result);
+					summ = result;
 					
 				}
                 else {String er = "Error!";
@@ -233,6 +237,7 @@ public class MathRgr extends  HttpServlet   {
 			    request.setAttribute("tab", "Vyvesky");
 			    result = Math.round(result);
 			    request.setAttribute("itog", result);
+			    summ = result;
 				}
 				else {
 					String er = "Error";
@@ -242,6 +247,7 @@ public class MathRgr extends  HttpServlet   {
 			}
 		   if (result !=0) {
 			   request.setAttribute("result", result);
+			   summ = result;
 		   }
 		  	
 					

@@ -69,8 +69,8 @@ public class PDFGenerator extends HttpServlet {
 		case "Letters": 
 			Paragraph paragraph = new Paragraph();
 		    paragraph.add(new Paragraph(MathRgr.typrek, new Font(times,14)));
-		    paragraph.add(new Paragraph(MathRgr.bukvy, new Font(times,12)));
-		    paragraph.add(new Paragraph(MathRgr.bukvy1, new Font(times,12)));
+		    paragraph.add(new Paragraph(MathRgr.summ.toString(), new Font(times,12)));
+		   
 		    try {
 				document.add(paragraph);
 			} catch (DocumentException e1) {
@@ -80,8 +80,8 @@ public class PDFGenerator extends HttpServlet {
 		case "Lightboxes":
 			Paragraph paragraph1 = new Paragraph();
 		    paragraph1.add(new Paragraph(MathRgr.typrek, new Font(times,14)));
-		    paragraph1.add(new Paragraph(MathRgr.light, new Font(times,12)));
-		    paragraph1.add(new Paragraph(MathRgr.light1, new Font(times,12)));
+		    paragraph1.add(new Paragraph(MathRgr.summ.toString(), new Font(times,12)));
+		   
 		    try {
 				document.add(paragraph1);
 			} catch (DocumentException e1) {
@@ -91,8 +91,8 @@ public class PDFGenerator extends HttpServlet {
 		case "Signboards": 
 			Paragraph paragraph2 = new Paragraph();
 		    paragraph2.add(new Paragraph(MathRgr.typrek, new Font(times,14)));
-		    paragraph2.add(new Paragraph(MathRgr.vyvesky, new Font(times,12)));
-		    paragraph2.add(new Paragraph(MathRgr.vyvesky1, new Font(times,12)));
+		    paragraph2.add(new Paragraph(MathRgr.summ.toString(), new Font(times,12)));
+		    
 		    try {
 				document.add(paragraph2);
 			} catch (DocumentException e1) {
