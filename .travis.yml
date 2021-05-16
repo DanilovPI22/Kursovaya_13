@@ -1,3 +1,10 @@
 language: java
 script:
 - mvn clean package
+deploy:
+  provider: heroku
+  api_key:
+    secure: "VSkjrhULYxzzrimdoMb0M4uQO68DyNCL3zWrgJiRfttBMJYT3swUCbMgNg4f8RNf4xnL5fk/QwaVOPwsCOF5YVgL5tDI/YooAAVa/1b1dBGftkOhnfAvcmiJisq9xRK/AF0/zKtin/wPl+E2hjzZPOXJN/G1ByonU6Zu+KQWlHDPKHaWYdOdBKdw+oOsSHRGfn2ln8QkKB0vRKOrGsjAatz/WIyLqLJukZkeoqxXB4Vwmv6wTk4g3ccDIzauh6FU0UEfhm31OfD0eVOfzy+l0bkUbnDnbRkH5zCFGx4OQOxU+rh21OaUTDF+AwxgU/1H4KXeidlRX3/qEZxILKm7xwI7X9oH8v202Gun0awfOXiy9YYySoj8OPBBMzB4aXHubuR6eIga2bwWYReKDBJMNwJ16HrNvyZFRkWQu7OmHp6uVF7W0fzFCcUm230nRRTvUTW0Em0jowBzyLGw9Sul7PSothgj40QQBXSLLx5DV3nOgZYwxEkKlu52o/rT8gTVAEZ2IFiOK5Fl7Og6LQ0K10lRRIw8XV3LR9laWoHDNqsIXZEdub1vk7RMm5HnZs7tRRb4+kkvRAEkXE38gPWigk8GbUFXccxv60QwoxTaoocqT8Etn/Xh4G5IZ1y8Jy7WV2QyIMXpBFcL/q5gj88k9RjfN2sGxa3Eod1Bte3lUXQ="
+  app:
+    master: Kursovaya_13
+    

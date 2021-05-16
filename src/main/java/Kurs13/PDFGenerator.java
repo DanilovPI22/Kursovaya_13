@@ -51,6 +51,7 @@ public class PDFGenerator extends HttpServlet {
 		BaseFont times = null;
 		try {
 			times = BaseFont.createFont("times.ttf", "cp1251", BaseFont.EMBEDDED);
+			
 		} catch (DocumentException | IOException e) {
 			e.printStackTrace();
 		}		
